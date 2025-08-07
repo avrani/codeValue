@@ -1,7 +1,6 @@
 import { Injectable, inject, signal } from '@angular/core';
 import { Product } from '../models/product.model';
 import { RestApiService } from '../services/rest-api.service';
-import { Subject } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
@@ -39,7 +38,7 @@ export class ProductsService {
         item.desc = desc;
         item.price = price;
       }
-      return item;
+      return {...item};
     }));
   }
 }

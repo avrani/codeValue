@@ -1,4 +1,4 @@
-import { Component, input,inject, ChangeDetectionStrategy } from '@angular/core';
+import { Component, input, inject, ChangeDetectionStrategy } from '@angular/core';
 import { Product } from '../models/product.model';
 import { ProductsService } from '../services/products.service';
 @Component({
@@ -13,11 +13,11 @@ export class ProductComponent {
   productService = inject(ProductsService);
 
   onSelect() {
-   this.productService.setSelectedProduct(this.product())
+    this.productService.setSelectedProduct(this.product())
   }
 
-  delete(){
-     this.productService.deleteProduct(this.product());
-     this.productService.setSelectedProduct({})
+  delete() {
+    this.productService.deleteProduct(this.product());
+    this.productService.setSelectedProduct({})
   }
 }
