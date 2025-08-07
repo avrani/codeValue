@@ -15,9 +15,6 @@ export class ProductsListComponent {
 
   ngOnInit() {
     this.products = this.productService.getProducts();
-    console.log(this.products());
-
-
   }
 
 }

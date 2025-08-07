@@ -1,0 +1,14 @@
+fieldset{
+    border:black solid 1px;
+    height: 95%;
+    width: 600px;
+    span{
+        background-color: white;
+       position: relative;
+       top: -10px;
+    }
+    img{
+        height: 150px;
+        width: auto;
+    }
+}

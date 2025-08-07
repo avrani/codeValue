@@ -1,5 +1,6 @@
-import { Component, input, ChangeDetectionStrategy } from '@angular/core';
+import { Component, input,inject, ChangeDetectionStrategy } from '@angular/core';
 import { Product } from '../models/product.model';
+import { ProductsService } from '../services/products.service';
 @Component({
   selector: 'app-product',
   imports: [],
@@ -9,9 +10,10 @@ import { Product } from '../models/product.model';
 })
 export class ProductComponent {
   product = input<Product>();
+  productService = inject(ProductsService);
 
-  ngOnInit() {
-    console.log(this.product());
-
+  onSelect() {
+   this.productService.setSelectedProduct(this.product())
+   
   }
 }
