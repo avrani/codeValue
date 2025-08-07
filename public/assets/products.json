@@ -2,15 +2,15 @@
     {
         "id": 1,
         "name": "Allstar brown",
-        "desc": "Allstar brown",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
         "price": 100,
         "creation_date": 1754578232,
         "img": "1.jpg"
     },
     {
         "id": 2,
-        "name": "Allstar brown",
-        "desc": "Allstar brown",
+        "name": "Dr Martens",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
         "price": 100,
         "creation_date": 1754578232,
         "img": "2.jpg"
@@ -18,7 +18,7 @@
     {
         "id": 3,
         "name": "Allstar brown",
-        "desc": "Allstar brown",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
         "price": 100,
         "creation_date": 1754578232,
         "img": "3.jpg"
@@ -26,41 +26,41 @@
     {
         "id": 4,
         "name": "Allstar brown",
-        "desc": "Allstar brown",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
         "price": 100,
         "creation_date": 1754578232,
         "img": "4.jpg"
     },
     {
-        "id": 1,
+        "id": 5,
         "name": "Allstar brown",
-        "desc": "Allstar brown",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
         "price": 100,
         "creation_date": 1754578232,
-        "img": "1.jpg"
+        "img": "5.jpg"
     },
     {
-        "id": 2,
+        "id": 6,
         "name": "Allstar brown",
-        "desc": "Allstar brown",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
         "price": 100,
         "creation_date": 1754578232,
-        "img": "2.jpg"
+        "img": "6.jpg"
     },
     {
-        "id": 3,
+        "id": 7,
         "name": "Allstar brown",
-        "desc": "Allstar brown",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
         "price": 100,
         "creation_date": 1754578232,
-        "img": "3.jpg"
+        "img": "7.jpg"
     },
     {
-        "id": 4,
+        "id": 8,
         "name": "Allstar brown",
-        "desc": "Allstar brown",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
         "price": 100,
         "creation_date": 1754578232,
-        "img": "4.jpg"
+        "img": "8.jpg"
     }
 ]

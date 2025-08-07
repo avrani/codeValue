@@ -1,4 +1,5 @@
 .container {
+    cursor: pointer;
     margin-bottom: 10px;
     height: 80px;
     border: black solid 1px;
@@ -6,9 +7,15 @@
     padding: 10px;
     align-items: center;
     display: flex;
-    .img-container{
+    background-color: white;
+    &:hover {
+         background-color:#F5F5F5;
+    }
+
+    .img-container {
         width: 190px;
     }
+
     img {
         width: auto;
         height: 90px;
