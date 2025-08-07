@@ -2,4 +2,36 @@
 body {
     margin: 0px;
     font-family: Arial;
+    overflow-y: hidden;
+}
+
+.btn-disabled {
+    width: 50px;
+    background-color: silver;
+    padding: 7px;
+    color: white;
+    position: relative;
+    cursor: not-allowed;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.btn {
+    width: 50px;
+    background-color: orange;
+    padding: 7px;
+    color: white;
+    position: relative;
+    cursor: pointer;
+    border-radius: 4px;
+    text-align: center;
+
+    &:active {
+        left: 1px;
+        top: 1px;
+    }
+
+    &:hover {
+        background-color: rgba(255, 166, 0, 0.698);
+    }
 }

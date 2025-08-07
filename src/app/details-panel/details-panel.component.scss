@@ -1,0 +1,30 @@
+fieldset{
+    border:black solid 1px;
+    height: 95%;
+    width: 600px;
+    span{
+        background-color: white;
+       position: relative;
+       top: -10px;
+    }
+    img{
+        height: 150px;
+        width: auto;
+    }
+    label{
+        display: block;
+        margin-bottom: 5px;
+    }
+    .desc{
+        width: 100%;
+    }
+    .btn-container{
+        display: flex;
+        justify-content: right;
+    }
+    form{
+        div{
+            margin:10px;
+        }
+    }
+}

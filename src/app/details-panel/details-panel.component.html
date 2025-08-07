@@ -1,1 +1,28 @@
-<p>details-panel works!</p>
+<fieldset class="container">
+     <legend>Product details</legend>
+     @if(showImage){
+     <img [src]="productImg">
+     }
+
+     <form [formGroup]="productForm">
+          <div>
+               <label for="name">Name: </label>
+               <input id="name" type="text" formControlName="name" />
+          </div>
+          <div>
+               <label for="desc">Description: </label>
+               <input id="desc" type="text" class="desc" formControlName="desc" />
+          </div>
+          <div>
+               <label for="price">Price: </label>
+               <input id="price" type="number" formControlName="price" /> $
+          </div>
+     </form>
+     <div class="btn-container">
+          @if(productForm.valid && productId>0){
+          <div class="btn" (click)="update()">save</div>
+          }@else{
+          <div class="btn-disabled">save</div>
+          }
+     </div>
+</fieldset>

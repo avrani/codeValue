@@ -1,12 +1,13 @@
-<div class="container">
-    <div class="img-container">
+<div class="container" >
+   
+    <div class="img-container" (click)="onSelect()">
         <img [src]="'assets/images/'+product()?.img">
     </div>
-    <div class="details">
+    <div class="details" (click)="onSelect()">
         <label>{{product()?.name}}</label>
         <div class="desc">{{product()?.desc}}</div>
     </div>
     <div class="delete">
-        <div class="btn">Delete</div>
+        <div class="btn" (click)="delete()">Delete</div>
     </div>
 </div>
