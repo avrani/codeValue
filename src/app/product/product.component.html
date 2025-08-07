@@ -1,6 +1,7 @@
-
 <div class="container">
-    <img [src]="'assets/images/'+product()?.img"> 
+    <div class="img-container">
+        <img [src]="'assets/images/'+product()?.img">
+    </div>
     <div class="details">
         <label>{{product()?.name}}</label>
         <div class="desc">{{product()?.desc}}</div>

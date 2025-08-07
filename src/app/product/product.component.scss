@@ -1,11 +1,14 @@
 .container {
+    margin-bottom: 10px;
     height: 80px;
     border: black solid 1px;
     width: 470px;
     padding: 10px;
     align-items: center;
     display: flex;
-
+    .img-container{
+        width: 190px;
+    }
     img {
         width: auto;
         height: 90px;

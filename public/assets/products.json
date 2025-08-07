@@ -5,6 +5,62 @@
         "desc": "Allstar brown",
         "price": 100,
         "creation_date": 1754578232,
-        "img":"1.jpg"
+        "img": "1.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Allstar brown",
+        "desc": "Allstar brown",
+        "price": 100,
+        "creation_date": 1754578232,
+        "img": "2.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Allstar brown",
+        "desc": "Allstar brown",
+        "price": 100,
+        "creation_date": 1754578232,
+        "img": "3.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Allstar brown",
+        "desc": "Allstar brown",
+        "price": 100,
+        "creation_date": 1754578232,
+        "img": "4.jpg"
+    },
+    {
+        "id": 1,
+        "name": "Allstar brown",
+        "desc": "Allstar brown",
+        "price": 100,
+        "creation_date": 1754578232,
+        "img": "1.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Allstar brown",
+        "desc": "Allstar brown",
+        "price": 100,
+        "creation_date": 1754578232,
+        "img": "2.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Allstar brown",
+        "desc": "Allstar brown",
+        "price": 100,
+        "creation_date": 1754578232,
+        "img": "3.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Allstar brown",
+        "desc": "Allstar brown",
+        "price": 100,
+        "creation_date": 1754578232,
+        "img": "4.jpg"
     }
 ]
