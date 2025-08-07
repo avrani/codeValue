@@ -28,7 +28,10 @@ export class DetailsPanelComponent {
 
   ngOnInit() {
     this.selectedProduct$.subscribe((product: Product) => {
+
       this.productId = product.id;
+      console.log(this.productId);
+      
       this.productImg = `assets/images/${product.img}`;
       this.showImage = product.img ? true : false;
       this.cdr.detectChanges()

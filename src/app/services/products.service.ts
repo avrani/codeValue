@@ -20,7 +20,7 @@ export class ProductsService {
   }
 
   setSelectedProduct(product: any) {
-    this.selectedProduct.update(v=>({...product}));
+    this.selectedProduct.update(v => ({ ...product }));
   }
 
   getSelectedProduct() {
@@ -32,13 +32,21 @@ export class ProductsService {
   }
 
   updateProduct(id: number, name: string, desc: string, price: number) {
-    this.products.update(products => products.map((item: Product) => {
-      if (item.id === id) {
-        item.name = name;
-        item.desc = desc;
-        item.price = price;
-      }
-      return {...item};
-    }));
+    let productIds = this.products().map(item => item.id);
+    if (productIds.includes(id)) {
+      this.products.update(products => products.map((item: Product) => {
+        if (item.id === id) {
+          item.name = name;
+          item.desc = desc;
+          item.price = price;
+        }
+        return { ...item };
+      }));
+    } else {
+      const newProduct: Product = { id: id, name: name, desc: desc, price: price, creation_date: new Date(), img: '' }
+      this.products.update(currentItems => [...currentItems, newProduct]);
+     
+    }
+
   }
 }
