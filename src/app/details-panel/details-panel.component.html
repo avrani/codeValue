@@ -1,4 +1,20 @@
 <fieldset class="container">
      <legend>Product details</legend>
      <img src="assets/images/1.jpg">
+     <form [formGroup]="productForm">
+          <div>
+               <label for="name">Name: </label>
+               <input id="name" type="text" formControlName="name" />
+          </div>
+          <div>
+               <label for="desc">Description: </label>
+               <input id="desc" type="text" formControlName="desc" />
+          </div>
+            <div>
+               <label for="price">Price: </label>
+               <input id="price" type="text" formControlName="price" />
+          </div>
+     </form>
+     <div class="btn">save</div>
+
 </fieldset>
