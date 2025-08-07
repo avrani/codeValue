@@ -43,10 +43,32 @@ export class ProductsService {
         return { ...item };
       }));
     } else {
-      const newProduct: Product = { id: id, name: name, desc: desc, price: price, creation_date: new Date(), img: '' }
+      const newProduct: Product = { id: id, name: name, desc: desc, price: price, creation_date: Date.now(), img: '', hide: false }
       this.products.update(currentItems => [...currentItems, newProduct]);
-     
     }
 
+  }
+
+  sortBy(property: any) {
+    let products = this.getProducts()();
+    products.sort((a, b) => {
+      let prop1: number | string = '';
+      let prop2: number | string = '';
+      if (property === 'name') {
+        prop1 = a.name.toUpperCase();
+        prop2 = b.name.toUpperCase();
+      } else {
+        prop1 = a.creation_date;
+        prop2 = b.creation_date;
+      }
+      if (prop1 < prop2) {
+        return -1;
+      }
+      if (prop1 > prop2) {
+        return 1;
+      }
+      return 0;
+    });
+    this.products.update(v => [...products]);
   }
 }

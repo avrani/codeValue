@@ -2,7 +2,7 @@
     <div class="btn" (click)="add()">Add</div>
     <input type="text" placeholder="Search Products">
     <span>Sort By</span>
-    <select>
+    <select [ngModel]="selected" (ngModelChange)="sort($event)">
         <option value="name">Name</option>
         <option value="creation">Creation Date</option>
     </select>

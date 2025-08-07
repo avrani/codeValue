@@ -3,6 +3,7 @@ export interface Product {
     name: string;
     desc: string;
     price: number;
-    creation_date: Date;
+    creation_date: number;
     img:string;
+    hide:boolean;
 }
