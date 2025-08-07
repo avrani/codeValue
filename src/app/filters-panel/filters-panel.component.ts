@@ -11,7 +11,8 @@ import { FormsModule } from '@angular/forms';
 })
 export class FiltersPanelComponent {
   productService = inject(ProductsService);
-  selected: string = ''
+  selected: string = '';
+  userText: string = '';
   add() {
     const newProduct: Product = {
       id: this.setId(),
@@ -37,5 +38,9 @@ export class FiltersPanelComponent {
 
   sort(property: string) {
     this.productService.sortBy(property);
+  }
+
+  filterByName(name: string) {
+    this.productService.filterByName(name);
   }
 }

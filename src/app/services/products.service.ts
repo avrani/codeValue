@@ -71,4 +71,19 @@ export class ProductsService {
     });
     this.products.update(v => [...products]);
   }
+
+  filterByName(name: string) {
+    let products = this.getProducts()();
+    products.map(item => {
+      if (item.name.toLowerCase().includes(name.toLowerCase())) {
+        item.hide = false;
+      } else {
+        item.hide = true;
+      }
+      return item;
+    })
+    console.log(products);
+    
+    this.products.update(v => [...products]);
+  }
 }

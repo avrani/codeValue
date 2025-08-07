@@ -1,6 +1,6 @@
 <div class="container">
     <div class="btn" (click)="add()">Add</div>
-    <input type="text" placeholder="Search Products">
+    <input type="text" placeholder="Search Products" [ngModel]="userText" (ngModelChange)="filterByName($event)">
     <span>Sort By</span>
     <select [ngModel]="selected" (ngModelChange)="sort($event)">
         <option value="name">Name</option>
