@@ -16,7 +16,12 @@
           </div>
      </form>
      <div class="btn-container">
-          <div class="btn">save</div>
+          @if(productForm.valid){
+               <div class="btn">save</div>
+          }@else{
+               <div class="btn-disabled">save</div>
+          }
+         
      </div>
      <h1>{{productForm.valid}}</h1>
 </fieldset>
