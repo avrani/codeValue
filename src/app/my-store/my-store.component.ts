@@ -16,7 +16,6 @@ export class MyStoreComponent {
   ngOnInit() {
     this.restApi.getProducts().subscribe(res=>{
       console.log(res);
-      
     })
   }
 }
