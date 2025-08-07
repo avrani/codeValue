@@ -26,8 +26,6 @@ export class DetailsPanelComponent {
   });
 
   ngOnInit() {
-
-
     this.selectedProduct$.subscribe((product: Product) => {
       this.productImg = `assets/images/${product.img}`;
       this.cdr.detectChanges()
