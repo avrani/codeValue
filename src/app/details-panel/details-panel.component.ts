@@ -1,9 +1,10 @@
-import { Component, ChangeDetectionStrategy, computed, inject, effect } from '@angular/core';
+import { Component, ChangeDetectionStrategy, ChangeDetectorRef, computed, inject, effect } from '@angular/core';
 import { ProductsService } from '../services/products.service';
 import { FormGroup, FormControl } from '@angular/forms';
 import { toObservable } from '@angular/core/rxjs-interop';
 import { ReactiveFormsModule } from '@angular/forms';
 import { Product } from '../models/product.model';
+
 @Component({
   selector: 'app-details-panel',
   imports: [ReactiveFormsModule],
@@ -13,8 +14,10 @@ import { Product } from '../models/product.model';
 })
 export class DetailsPanelComponent {
   productService = inject(ProductsService);
+  cdr = inject(ChangeDetectorRef);
   selectedProduct = this.productService.getSelectedProduct();
   selectedProduct$ = toObservable(this.selectedProduct);
+  productImg: string = '';
 
   productForm = new FormGroup({
     name: new FormControl(''),
@@ -24,6 +27,11 @@ export class DetailsPanelComponent {
 
   ngOnInit() {
     this.selectedProduct$.subscribe((product: Product) => {
+      console.log(product.img);
+
+      this.productImg = `assets/images/${product.img}`;
+      this.cdr.detectChanges()
+
       this.productForm.patchValue({
         name: product.name,
         desc: product.desc,
