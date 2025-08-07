@@ -1,0 +1,46 @@
+.container {
+    height: 100px;
+    border: black solid 1px;
+    width: 400px;
+    padding: 10px;
+    align-items: center;
+    display: flex;
+
+    img {
+        width: auto;
+        height: 90px;
+    }
+
+    .details {
+        border: black solid 1px;
+        height: 88px;
+        width: 220px;
+
+        p {
+            margin: 0;
+        }
+    }
+
+    .delete {
+        display: flex;
+        height: 90px;
+        align-items: end;
+
+        .btn {
+            width: 50px;
+            background-color: orange;
+            padding: 7px;
+            color: white;
+            position: relative;
+            cursor: pointer;
+            border-radius: 4px;
+            &:active {
+                left:1px;
+                top: 1px;
+            }
+            &:hover{
+               background-color: rgba(255, 166, 0, 0.698);  
+            }
+        }
+    }
+}
