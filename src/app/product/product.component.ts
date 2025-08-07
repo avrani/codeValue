@@ -14,6 +14,10 @@ export class ProductComponent {
 
   onSelect() {
    this.productService.setSelectedProduct(this.product())
-   
+  }
+
+  delete(){
+     this.productService.deleteProduct(this.product());
+     this.productService.setSelectedProduct({})
   }
 }

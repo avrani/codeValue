@@ -18,7 +18,7 @@ export class DetailsPanelComponent {
   selectedProduct = this.productService.getSelectedProduct();
   selectedProduct$ = toObservable(this.selectedProduct);
   productImg: string = '';
-
+  showPanel: boolean = false;
   productForm = new FormGroup({
     name: new FormControl('', [Validators.required]),
     desc: new FormControl(''),
@@ -28,6 +28,7 @@ export class DetailsPanelComponent {
   ngOnInit() {
     this.selectedProduct$.subscribe((product: Product) => {
       this.productImg = `assets/images/${product.img}`;
+      this.showPanel =  Object.keys(product).length > 0 ? true : false;
       this.cdr.detectChanges()
       this.productForm.patchValue({
         name: product.name,
@@ -39,7 +40,7 @@ export class DetailsPanelComponent {
   }
 
   save() {
-    
+
   }
 }
 

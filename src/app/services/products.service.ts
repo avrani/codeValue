@@ -13,7 +13,6 @@ export class ProductsService {
   loadInit() {
     this.restApi.getProducts().subscribe(res => {
       this.products.set(res);
-      this.setSelectedProduct(res[0])
     })
   }
 
@@ -27,5 +26,9 @@ export class ProductsService {
 
   getSelectedProduct(){
     return this.selectedProduct.asReadonly();
+  }
+
+  deleteProduct(product: any){
+    this.products.update(products=> products.filter(item=>item.id!==product.id));
   }
 }

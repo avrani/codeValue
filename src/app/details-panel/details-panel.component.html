@@ -1,6 +1,7 @@
+@if(showPanel){
 <fieldset class="container">
      <legend>Product details</legend>
-     <img  [src]="productImg">
+     <img [src]="productImg">
      <form [formGroup]="productForm">
           <div>
                <label for="name">Name: </label>
@@ -17,9 +18,10 @@
      </form>
      <div class="btn-container">
           @if(productForm.valid){
-               <div class="btn">save</div>
+          <div class="btn">save</div>
           }@else{
-               <div class="btn-disabled">save</div>
+          <div class="btn-disabled">save</div>
           }
      </div>
 </fieldset>
+}
