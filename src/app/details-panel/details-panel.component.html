@@ -18,7 +18,7 @@
      </form>
      <div class="btn-container">
           @if(productForm.valid){
-          <div class="btn">save</div>
+          <div class="btn" (click)="update()">save</div>
           }@else{
           <div class="btn-disabled">save</div>
           }

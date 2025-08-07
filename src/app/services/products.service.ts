@@ -24,11 +24,22 @@ export class ProductsService {
     this.selectedProduct.set(product);
   }
 
-  getSelectedProduct(){
+  getSelectedProduct() {
     return this.selectedProduct.asReadonly();
   }
 
-  deleteProduct(product: any){
-    this.products.update(products=> products.filter(item=>item.id!==product.id));
+  deleteProduct(product: any) {
+    this.products.update(products => products.filter(item => item.id !== product.id));
+  }
+
+  updateProduct(id: number, name: string, desc: string, price: number) {
+    this.products.update(products => products.map((item: Product) => {
+      if (item.id === id) {
+        item.name = name;
+        item.desc = desc;
+        item.price = price;
+      }
+      return item;
+    }));
   }
 }

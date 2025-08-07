@@ -19,6 +19,7 @@ export class DetailsPanelComponent {
   selectedProduct$ = toObservable(this.selectedProduct);
   productImg: string = '';
   showPanel: boolean = false;
+  productId: number = NaN;
   productForm = new FormGroup({
     name: new FormControl('', [Validators.required]),
     desc: new FormControl(''),
@@ -27,8 +28,9 @@ export class DetailsPanelComponent {
 
   ngOnInit() {
     this.selectedProduct$.subscribe((product: Product) => {
+      this.productId=product.id;
       this.productImg = `assets/images/${product.img}`;
-      this.showPanel =  Object.keys(product).length > 0 ? true : false;
+      this.showPanel = Object.keys(product).length > 0 ? true : false;
       this.cdr.detectChanges()
       this.productForm.patchValue({
         name: product.name,
@@ -39,8 +41,11 @@ export class DetailsPanelComponent {
 
   }
 
-  save() {
-
+  update() {
+    const name = this.productForm.value.name || "";
+    const desc = this.productForm.value.desc || "";
+    const price = this.productForm.value.price || 0;
+    this.productService.updateProduct(this.productId,name, desc, price);
   }
 }
 
