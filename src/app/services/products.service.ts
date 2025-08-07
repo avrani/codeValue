@@ -13,6 +13,7 @@ export class ProductsService {
   loadInit() {
     this.restApi.getProducts().subscribe(res => {
       this.products.set(res);
+      this.setSelectedProduct(res[0])
     })
   }
 

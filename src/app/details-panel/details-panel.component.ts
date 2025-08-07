@@ -27,11 +27,8 @@ export class DetailsPanelComponent {
 
   ngOnInit() {
     this.selectedProduct$.subscribe((product: Product) => {
-      console.log(product.img);
-
       this.productImg = `assets/images/${product.img}`;
       this.cdr.detectChanges()
-
       this.productForm.patchValue({
         name: product.name,
         desc: product.desc,
