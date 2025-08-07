@@ -1,0 +1,12 @@
+<div class="container">
+    <div class="img-container">
+        <img [src]="'assets/images/'+product()?.img">
+    </div>
+    <div class="details">
+        <label>{{product()?.name}}</label>
+        <div class="desc">{{product()?.desc}}</div>
+    </div>
+    <div class="delete">
+        <div class="btn">Delete</div>
+    </div>
+</div>
