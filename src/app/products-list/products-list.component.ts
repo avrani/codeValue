@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component ,inject, signal} from '@angular/core';
 import { ProductComponent } from '../product/product.component';
+import { ProductsService } from '../services/products.service';
+import { Product } from '../models/product.model';
 @Component({
   selector: 'app-products-list',
   imports: [ProductComponent],
@@ -7,5 +9,14 @@ import { ProductComponent } from '../product/product.component';
   styleUrl: './products-list.component.scss'
 })
 export class ProductsListComponent {
-
+     productService = inject(ProductsService);
+      products = signal<Product[]>([]);
+      
+     ngOnInit(){
+      this.products=this.productService.getProducts();
+      console.log(this.products());
+      
+      
+     }
+    
 }

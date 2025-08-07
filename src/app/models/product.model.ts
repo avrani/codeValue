@@ -4,4 +4,5 @@ export interface Product {
     desc: string;
     price: number;
     creation_date: Date;
+    img:string;
 }

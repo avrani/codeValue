@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-
+import { Component, input } from '@angular/core';
+import { Product } from '../models/product.model';
 @Component({
   selector: 'app-product',
   imports: [],
@@ -7,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrl: './product.component.scss'
 })
 export class ProductComponent {
+  product = input<Product>();
 
+  ngOnInit(){
+    console.log(this.product());
+    
+  }
 }

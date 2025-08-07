@@ -1,2 +1,8 @@
 <p>products-list works!</p>
-<app-product></app-product>
+
+
+ @for(product of products();track product.id){
+<app-product [product]="product"></app-product>
+}
+
+ 

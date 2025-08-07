@@ -1,8 +1,9 @@
+
 <div class="container">
-    <img src="assets/images/1.jpg">
+    <img [src]="'assets/images/'+product()?.img"> 
     <div class="details">
-        <label>name</label>
-        <div class="desc">desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc  desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc desc </div>
+        <label>{{product()?.name}}</label>
+        <div class="desc">{{product()?.desc}}</div>
     </div>
     <div class="delete">
         <div class="btn">Delete</div>

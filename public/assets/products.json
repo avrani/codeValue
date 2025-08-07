@@ -1,9 +1,10 @@
 [
     {
         "id": 1,
-        "name": "",
-        "desc": "",
+        "name": "Allstar brown",
+        "desc": "Allstar brown",
         "price": 100,
-        "creation_date": 1754578232
+        "creation_date": 1754578232,
+        "img":"1.jpg"
     }
 ]
