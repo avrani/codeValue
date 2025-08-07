@@ -20,7 +20,7 @@ export class ProductsService {
   }
 
   setSelectedProduct(product: any) {
-    this.selectedProduct.set(product);
+    this.selectedProduct.update(v=>({...product}));
   }
 
   getSelectedProduct() {

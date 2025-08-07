@@ -1,7 +1,9 @@
-@if(showPanel){
 <fieldset class="container">
      <legend>Product details</legend>
+     @if(showImage){
      <img [src]="productImg">
+     }
+
      <form [formGroup]="productForm">
           <div>
                <label for="name">Name: </label>
@@ -24,4 +26,3 @@
           }
      </div>
 </fieldset>
-}
