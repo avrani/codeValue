@@ -1,8 +1,8 @@
-import { Component, ChangeDetectionStrategy, ChangeDetectorRef, computed, inject, effect } from '@angular/core';
+import { Component, ChangeDetectionStrategy, ChangeDetectorRef, inject } from '@angular/core';
 import { ProductsService } from '../services/products.service';
 import { FormGroup, FormControl } from '@angular/forms';
 import { toObservable } from '@angular/core/rxjs-interop';
-import { ReactiveFormsModule, Validators, AbstractControl, ValidationErrors, ValidatorFn } from '@angular/forms';
+import { ReactiveFormsModule, Validators} from '@angular/forms';
 import { Product } from '../models/product.model';
 import { greaterThanZero } from './custom-validation';
 @Component({
@@ -28,10 +28,7 @@ export class DetailsPanelComponent {
 
   ngOnInit() {
     this.selectedProduct$.subscribe((product: Product) => {
-
       this.productId = product.id;
-      console.log(this.productId);
-      
       this.productImg = `assets/images/${product.img}`;
       this.showImage = product.img ? true : false;
       this.cdr.detectChanges()
@@ -41,7 +38,6 @@ export class DetailsPanelComponent {
         price: product.price
       });
     })
-
   }
 
   update() {
